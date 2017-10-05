@@ -8,10 +8,24 @@ const ExempleSynchronousValidation = ({handleSubmit, erreursDansLeFormulaire}) =
     <div>
       <h2>Synchronous Validation</h2>
       <form onSubmit={ handleSubmit }>
-        <Field name="numero" component="input" type="text" placeholder="Numéro"/> <br/>
-        <Field name="rue" component="input" type="text" placeholder="Rue"/><br/>
+        <Field name="numero" component="input" type="text" placeholder="Numéro"/> <br/><br/>
+
+        "Numéro" avec un renderField pour afficher les erreurs
+        <Field name="numero" component={renderAvecErreursDeValidation} /> <br/>
+
+        <Field name="rue" component="input" type="text" placeholder="Rue"/> <br/><br/>
+
+        Disabled tant qu'il y a des erreurs dans le formulaire <br/>
         <button type="submit" disabled={erreursDansLeFormulaire}>Submit</button>
       </form>
+    </div>
+)
+
+const renderAvecErreursDeValidation = ({input, meta}) => (
+    <div>
+      { /* Ici {...input} sert à propager les props ajoutés par redux-form https://redux-form.com/7.0.4/docs/api/field.md/#input-props */ }
+      <input type="text" readOnly {...input} />
+      {meta.error && <div style={{color:'orange'}}>{meta.error}</div>}
     </div>
 )
 
