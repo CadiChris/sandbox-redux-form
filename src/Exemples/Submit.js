@@ -16,6 +16,7 @@ const ExempleSubmit = ({ handleSubmit }) => {
 
 export default reduxForm({
   form: 'ExempleSubmit',
-  // onSubmit est définie ici, et sera appelée par ReduxForm. Pas besoin de le déclarer dans les props <FormAdresse />
+  // onSubmit est définie ici, et sera appelée par ReduxForm.
+  // Pas besoin de le déclarer dans les props en paramètre de <FormAdresse />
   onSubmit: (values) => console.log('onSubmit !', values),
 })(ExempleSubmit)
