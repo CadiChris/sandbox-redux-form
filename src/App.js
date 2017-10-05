@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ExempleSubmit from './Exemples/Submit';
 import ExempleInitialValues from './Exemples/InitialValues';
+import ExempleSynchronousValidation from './Exemples/SynchronousValidation';
 
 class App extends Component {
   render() {
@@ -8,6 +9,7 @@ class App extends Component {
         <div style={{display: 'flex', margin:'50px', justifyContent:'space-around'}}>
           <ExempleSubmit />
           <ExempleInitialValues />
+          <ExempleSynchronousValidation />
         </div>
     );
   }

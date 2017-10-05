@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import { Field, reduxForm } from 'redux-form'
 
-// C'est la prop initialValues qui sera utilisé par les Fields. Mais pas besoin de la déclarer
+// C'est la prop initialValues qui sera utilisée par les Fields. Mais pas besoin de la déclarer
 const ExempleInitialValues = () => {
   return (
     <div>
