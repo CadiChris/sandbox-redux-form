@@ -13,7 +13,7 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  compteur: state.compteur
+  compteur: state.app.compteur
 });
 
 export default connect(mapStateToProps)(App)
