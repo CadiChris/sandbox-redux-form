@@ -6,9 +6,20 @@ import { reducer as formReducer } from 'redux-form'
 import './index.css';
 import App from './App';
 
+const appReducer = (state = {compteur: 10}, action) => {
+  switch (action.type) {
+    case 'NUMERO':
+      return {
+          ...state,
+        compteur: 1000 + Number(action.numero) // Ajoute 1000 pour montrer qu'on est passé dans le reducer.
+      }
+    default: return state
+  }
+}
+
 let store = createStore(
     combineReducers({
-      app: (state = {compteur: 10}, action) => state,
+      app: appReducer,
       form: formReducer
     }) ,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
