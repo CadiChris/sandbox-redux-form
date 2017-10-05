@@ -6,7 +6,7 @@ import { Field, reduxForm } from 'redux-form'
 const ExempleInitialValues = () => {
   return (
     <div>
-      <h2>Exemple Initial Values</h2>
+      <h2>Initial Values</h2>
       <form>
         <Field name="numero" component="input" type="text" placeholder="Numéro"/> <br/>
         <Field name="rue" component="input" type="text" placeholder="Rue"/><br/>

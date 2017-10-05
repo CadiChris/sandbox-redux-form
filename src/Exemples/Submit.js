@@ -4,7 +4,7 @@ import { Field, reduxForm } from 'redux-form'
 const ExempleSubmit = ({ handleSubmit }) => {
   return (
     <div>
-      <h2>Exemple Submit</h2>
+      <h2>Submit</h2>
       <form onSubmit={ handleSubmit }>
         <Field name="numero" component="input" type="text" placeholder="Numéro"/> <br/>
         <Field name="rue" component="input" type="text" placeholder="Rue"/><br/>

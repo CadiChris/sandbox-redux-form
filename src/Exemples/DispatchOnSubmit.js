@@ -6,11 +6,14 @@ import { Field, reduxForm } from 'redux-form'
 const ExempleDispatchOnSubmit = ({handleSubmit}) => (
 
     <div>
-      <h2>Exemple Submit</h2>
+      <h2>Dispatch on Submit</h2>
       <form onSubmit={ handleSubmit }>
         <Field name="numero" component="input" type="text" placeholder="Numéro"/> <br/>
         <Field name="rue" component="input" type="text" placeholder="Rue"/><br/>
-        <button type="submit">Submit</button>
+        <button type="submit">Submit</button><br/>
+        <div style={{width:'160px'}}>
+          Au submit on dispatch le numero. Cela va augmenter la valeur du compteur dans le state.
+        </div>
       </form>
     </div>
 )
