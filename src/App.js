@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import './App.css';
 
 class App extends Component {
   render() {
     return (
-        <p className="App-intro" style={{margin:'50px'}}>
+        <p style={{margin:'50px'}}>
           {this.props.compteur}
         </p>
     );

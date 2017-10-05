@@ -2,12 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
 import { createStore, combineReducers } from 'redux'
+import { reducer as formReducer } from 'redux-form'
 import './index.css';
 import App from './App';
 
 let store = createStore(
     combineReducers({
-      app: (state = {compteur: 10}, action) => state
+      app: (state = {compteur: 10}, action) => state,
+      form: formReducer
     }) ,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
